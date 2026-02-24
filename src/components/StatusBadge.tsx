@@ -15,7 +15,7 @@ export function StatusBadge({
     <span
       className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-xs font-medium ${variants[status]}`}
     >
-      {status === "Hackathon Winner" && award ? `${award} — ${status}` : status}
+      {status === "Hackathon Winner" && award ? `${status} — ${award}` : status}
     </span>
   );
 }
