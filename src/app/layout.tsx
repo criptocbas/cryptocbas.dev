@@ -15,6 +15,7 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cryptocbas.dev"),
+  alternates: { canonical: "https://cryptocbas.dev" },
   title: "CBas | Solana Developer",
   description:
     "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",

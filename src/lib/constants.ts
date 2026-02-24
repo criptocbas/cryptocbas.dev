@@ -4,5 +4,5 @@ export const SITE = {
   description:
     "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
   email: "cbas.solana@gmail.com",
-  url: "https://cbas.dev",
+  url: "https://cryptocbas.dev",
 } as const;
