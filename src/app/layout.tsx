@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CBas | Solana Developer",
     description:
-      "Portfolio of CBas — Solana developer building privacy-first and real-time on-chain applications.",
+      "Solana developer building privacy-first and real-time on-chain applications.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "CBas | Solana Developer",
     description:
-      "Portfolio of CBas — Solana developer building privacy-first and real-time on-chain applications.",
+      "Solana developer building privacy-first and real-time on-chain applications.",
   },
 };
 
@@ -37,8 +37,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} ${jetbrains.variable} antialiased`}>
+    <html lang="en" className="dark scroll-smooth">
+      <body
+        className={`${inter.variable} ${jetbrains.variable} dot-grid antialiased`}
+      >
         <Navbar />
         {children}
       </body>

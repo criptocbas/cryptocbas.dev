@@ -8,6 +8,7 @@ export interface Project {
   status: "Shipped" | "In Progress" | "Hackathon Winner";
   award?: string;
   hackathon?: string;
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -20,7 +21,7 @@ export const projects: Project[] = [
     tech: ["Solana", "Anchor", "Inco FHE", "MagicBlock VRF", "Next.js", "TypeScript"],
     links: [
       { label: "GitHub", url: "https://github.com/HiddenHandPoker/HiddenHand", icon: "github" },
-      { label: "Live", url: "https://hiddenhand.netlify.app", icon: "external" },
+      { label: "Live Demo", url: "https://hiddenhand.netlify.app", icon: "external" },
     ],
     status: "Hackathon Winner",
     award: "Open Track Winner",
@@ -37,5 +38,6 @@ export const projects: Project[] = [
       { label: "GitHub", url: "https://github.com/criptocbas/outcry", icon: "github" },
     ],
     status: "In Progress",
+    hackathon: "Graveyard Hackathon",
   },
 ];

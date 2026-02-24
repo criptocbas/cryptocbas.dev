@@ -1,21 +1,73 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* ── Core Palette ── */
   --color-bg: #0a0a0f;
-  --color-bg-card: #12121a;
-  --color-bg-nav: rgba(10, 10, 15, 0.8);
-  --color-surface: #1a1a2e;
-  --color-border: #2a2a3e;
-  --color-text: #e0e0e0;
-  --color-text-muted: #8888a0;
-  --color-accent: #00ffc8;
-  --color-accent-dim: rgba(0, 255, 200, 0.1);
-  --color-purple: #9945ff;
-  --color-purple-dim: rgba(153, 69, 255, 0.1);
+  --color-bg-card: #0f0f18;
+  --color-bg-card-hover: #131320;
+  --color-bg-nav: rgba(10, 10, 15, 0.85);
+  --color-surface: #161622;
+  --color-border: #1e1e30;
+  --color-border-hover: rgba(0, 255, 200, 0.2);
 
+  /* ── Text ── */
+  --color-text: #e4e4ed;
+  --color-text-muted: #6b6b80;
+
+  /* ── Accent — neon cyan ── */
+  --color-accent: #00ffc8;
+  --color-accent-dim: rgba(0, 255, 200, 0.08);
+  --color-accent-glow: rgba(0, 255, 200, 0.15);
+
+  /* ── Secondary — Solana purple ── */
+  --color-purple: #9945ff;
+  --color-purple-dim: rgba(153, 69, 255, 0.08);
+  --color-purple-glow: rgba(153, 69, 255, 0.15);
+
+  /* ── Status ── */
+  --color-gold: #f0b429;
+  --color-gold-dim: rgba(240, 180, 41, 0.1);
+
+  /* ── Typography ── */
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains);
+
+  /* ── Animations ── */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float-slow 8s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-blink: blink 1s step-end infinite;
+  --animate-scroll-hint: scroll-hint 2s ease-in-out infinite;
 }
+
+/* ── Keyframes ── */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(1deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes scroll-hint {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+/* ── Base ── */
 
 * {
   scroll-behavior: smooth;
@@ -27,12 +79,22 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
+/* ── Dot Grid Background ── */
+
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Selection ── */
+
 ::selection {
-  background: rgba(0, 255, 200, 0.3);
+  background: rgba(0, 255, 200, 0.25);
   color: #fff;
 }
 
-/* Scrollbar */
+/* ── Scrollbar ── */
+
 ::-webkit-scrollbar {
   width: 6px;
 }

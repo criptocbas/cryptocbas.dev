@@ -26,6 +26,10 @@ const icons = {
   ),
 };
 
+/**
+ * Can be used as a standalone link or as an icon-only inline element.
+ * When `url` is "#" or component is used inside another <a>, it renders a <span>.
+ */
 export function SocialIcon({
   icon,
   url,
@@ -37,15 +41,26 @@ export function SocialIcon({
   label: string;
   className?: string;
 }) {
+  const inner = icons[icon];
+
+  // When used inline (e.g. inside a button/link), render as span
+  if (url === "#") {
+    return (
+      <span aria-label={label} className={`text-text-muted ${className}`}>
+        {inner}
+      </span>
+    );
+  }
+
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className={`text-text-muted transition-colors hover:text-accent ${className}`}
+      className={`text-text-muted transition-colors duration-300 hover:text-accent ${className}`}
     >
-      {icons[icon]}
+      {inner}
     </a>
   );
 }
