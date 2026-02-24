@@ -14,20 +14,25 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cryptocbas.dev"),
   title: "CBas | Solana Developer",
   description:
-    "Portfolio of CBas — Solana developer building privacy-first and real-time on-chain applications.",
+    "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
+  icons: {
+    icon: "/madlad.png",
+    apple: "/madlad.png",
+  },
   openGraph: {
     title: "CBas | Solana Developer",
     description:
-      "Solana developer building privacy-first and real-time on-chain applications.",
+      "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "CBas | Solana Developer",
     description:
-      "Solana developer building privacy-first and real-time on-chain applications.",
+      "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
   },
 };
 

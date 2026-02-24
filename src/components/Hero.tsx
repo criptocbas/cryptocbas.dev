@@ -35,10 +35,24 @@ export function Hero() {
 
       {/* ── Content ── */}
       <div className="relative z-10 mx-auto max-w-4xl text-center">
+        {/* Avatar */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ ...spring, delay: 0.05 }}
+          className="mx-auto mb-6 h-28 w-28 overflow-hidden rounded-full border-2 border-accent/20 shadow-[0_0_30px_rgba(0,255,200,0.1)] sm:h-32 sm:w-32"
+        >
+          <img
+            src="/madlad.png"
+            alt="CBas"
+            className="h-full w-full object-cover"
+          />
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ ...spring, delay: 0.1 }}
+          transition={{ ...spring, delay: 0.15 }}
           className="mb-4 font-mono text-sm tracking-wider text-accent/80"
         >
           gm, I&apos;m
