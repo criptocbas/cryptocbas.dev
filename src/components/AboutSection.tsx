@@ -13,8 +13,9 @@ export function AboutSection() {
           What I Work With
         </h2>
         <p className="mb-14 max-w-xl text-sm leading-relaxed text-text-muted">
-          Focused on the Solana ecosystem — building decentralized protocols,
-          winning hackathons, and shipping products people can use.
+          I&apos;ve shipped hackathon-winning Solana applications and I&apos;m
+          ready to build yours. Deep experience across the full stack — from
+          Rust programs to polished frontends.
         </p>
       </AnimateOnScroll>
 
