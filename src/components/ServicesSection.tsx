@@ -54,7 +54,7 @@ export function ServicesSection() {
         <h2 className="mb-2 text-3xl font-bold tracking-tight md:text-4xl">
           What I Can Build For You
         </h2>
-        <p className="mb-14 max-w-lg text-sm text-text-muted">
+        <p className="mb-14 max-w-lg text-base text-text-muted">
           Available for freelance projects on Solana. From smart contracts to
           full-stack applications — I ship fast and build to last.
         </p>
@@ -67,7 +67,7 @@ export function ServicesSection() {
               <div className="mb-4 text-accent/70 transition-colors duration-300 group-hover:text-accent">
                 {service.icon}
               </div>
-              <h3 className="mb-2 text-sm font-semibold text-text">
+              <h3 className="mb-2 text-base font-semibold text-text">
                 {service.title}
               </h3>
               <p className="flex-1 text-sm leading-relaxed text-text-muted">

@@ -85,7 +85,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...spring, delay: 0.5 }}
-          className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-text-muted/80"
+          className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-text-muted"
         >
           {SITE.description}
         </motion.p>

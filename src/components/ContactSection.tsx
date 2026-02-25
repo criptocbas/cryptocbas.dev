@@ -19,7 +19,7 @@ export function ContactSection() {
             </span>
           </h2>
 
-          <p className="mx-auto mb-10 max-w-md text-sm leading-relaxed text-text-muted">
+          <p className="mx-auto mb-10 max-w-md text-base leading-relaxed text-text-muted">
             I&apos;m available for freelance work on Solana. Whether you need a
             smart contract, a full-stack dApp, or a hackathon teammate — let&apos;s
             talk.

@@ -13,7 +13,7 @@ export function ProjectsSection() {
         <h2 className="mb-2 text-3xl font-bold tracking-tight md:text-4xl">
           Projects
         </h2>
-        <p className="mb-14 max-w-lg text-sm text-text-muted">
+        <p className="mb-14 max-w-lg text-base text-text-muted">
           On-chain applications I&apos;ve shipped and am building on Solana.
         </p>
       </AnimateOnScroll>

@@ -12,7 +12,7 @@ export function AboutSection() {
         <h2 className="mb-2 text-3xl font-bold tracking-tight md:text-4xl">
           What I Work With
         </h2>
-        <p className="mb-14 max-w-xl text-sm leading-relaxed text-text-muted">
+        <p className="mb-14 max-w-xl text-base leading-relaxed text-text-muted">
           I&apos;ve shipped hackathon-winning Solana applications and I&apos;m
           ready to build yours. Deep experience across the full stack — from
           Rust programs to polished frontends.
@@ -28,7 +28,7 @@ export function AboutSection() {
                 <span className="font-mono text-xs text-accent/50">
                   &gt;_
                 </span>
-                <h3 className="font-mono text-sm font-semibold text-accent/90">
+                <h3 className="font-mono text-sm font-semibold text-accent">
                   {cat.label}
                 </h3>
               </div>

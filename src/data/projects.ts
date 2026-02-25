@@ -18,7 +18,7 @@ export const projects: Project[] = [
     image: "/HiddenHand.png",
     tagline: "The only poker game where the house can't see your cards.",
     description:
-      "Fully on-chain Texas Hold'em on Solana with cryptographic privacy guarantees. Uses MagicBlock VRF for provably fair shuffling, Inco Lightning FHE to encrypt all 52 cards so not even the platform can peek, and Ed25519 signatures for verified reveals at showdown. Don't trust the dealer — trust the math.",
+      "Fully on-chain Texas Hold'em with cryptographic privacy. Provably fair shuffling, FHE-encrypted cards, and verified reveals — no one can see your cards, not even the platform.",
     tech: ["Solana", "Anchor", "Inco FHE", "MagicBlock VRF", "Next.js", "TypeScript"],
     links: [
       { label: "GitHub", url: "https://github.com/HiddenHandPoker/HiddenHand", icon: "github" },
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     image: "/outcry.png",
     tagline: "Going, going, onchain.",
     description:
-      "Real-time live auction protocol on Solana — every bid is an onchain transaction at sub-50ms latency using MagicBlock Ephemeral Rollups. Artists list NFTs, collectors compete in English auctions, and spectators watch. Features anti-sniping, compressed NFT participation badges via Metaplex Bubblegum, and an on-chain social layer via Tapestry.",
+      "Real-time live auctions where every bid settles onchain at sub-50ms via Ephemeral Rollups. Anti-sniping protection, compressed NFT badges, and a built-in social layer.",
     tech: ["Solana", "Anchor", "Ephemeral Rollups", "Metaplex Bubblegum", "Tapestry", "Next.js"],
     links: [
       { label: "GitHub", url: "https://github.com/criptocbas/outcry", icon: "github" },
