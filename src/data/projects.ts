@@ -4,7 +4,7 @@ export interface Project {
   tagline: string;
   description: string;
   tech: string[];
-  links: { label: string; url: string; icon?: "github" | "external" }[];
+  links: { label: string; url: string; icon?: "github" | "external" | "youtube" }[];
   status: "Shipped" | "In Progress" | "Hackathon Winner";
   award?: string;
   hackathon?: string;
@@ -23,6 +23,7 @@ export const projects: Project[] = [
     links: [
       { label: "GitHub", url: "https://github.com/HiddenHandPoker/HiddenHand", icon: "github" },
       { label: "Live Demo", url: "https://hiddenhand.netlify.app", icon: "external" },
+      { label: "Demo Video", url: "https://youtu.be/6WgATb6sfp4", icon: "youtube" },
     ],
     status: "Hackathon Winner",
     award: "Open Track Winner",
