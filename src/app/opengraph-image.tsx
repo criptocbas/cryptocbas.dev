@@ -8,7 +8,7 @@ export const contentType = "image/png";
 
 export default async function Image() {
   const imageData = await readFile(
-    join(process.cwd(), "public", "madlad.png")
+    join(process.cwd(), "public", "madlad-og.png")
   );
   const imageSrc = `data:image/png;base64,${imageData.toString("base64")}`;
 

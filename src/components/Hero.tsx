@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "motion/react";
 import { SITE } from "@/lib/constants";
 import { socials } from "@/data/socials";
@@ -42,9 +43,12 @@ export function Hero() {
           transition={{ ...spring, delay: 0.05 }}
           className="mx-auto mb-6 h-28 w-28 overflow-hidden rounded-full border-2 border-accent/20 shadow-[0_0_30px_rgba(0,255,200,0.1)] sm:h-32 sm:w-32"
         >
-          <img
-            src="/madlad.png"
+          <Image
+            src="/madlad.webp"
             alt="CBas"
+            width={128}
+            height={128}
+            priority
             className="h-full w-full object-cover"
           />
         </motion.div>

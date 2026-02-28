@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   description:
     "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
   icons: {
-    icon: "/madlad.png",
-    apple: "/madlad.png",
+    icon: "/madlad-icon.png",
+    apple: "/madlad-icon.png",
   },
   openGraph: {
     title: "CBas | Solana Developer",

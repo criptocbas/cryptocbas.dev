@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Project } from "@/data/projects";
 import { GlowCard } from "./GlowCard";
 import { TechPill } from "./TechPill";
@@ -17,9 +18,11 @@ export function ProjectCard({
         {/* Image / Gradient Placeholder */}
         {project.image ? (
           <div className="relative -mx-6 -mt-6 mb-6 overflow-hidden rounded-t-2xl">
-            <img
+            <Image
               src={project.image}
               alt={project.title}
+              width={800}
+              height={400}
               className="h-48 w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-card to-transparent" />
