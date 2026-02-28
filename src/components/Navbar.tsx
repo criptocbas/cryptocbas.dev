@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { m, AnimatePresence } from "motion/react";
 import { SITE } from "@/lib/constants";
 
 const links = [
@@ -46,15 +46,15 @@ export function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={open}
         >
-          <motion.span
+          <m.span
             animate={open ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
             className="block h-0.5 w-6 bg-text"
           />
-          <motion.span
+          <m.span
             animate={open ? { opacity: 0 } : { opacity: 1 }}
             className="block h-0.5 w-6 bg-text"
           />
-          <motion.span
+          <m.span
             animate={open ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
             className="block h-0.5 w-6 bg-text"
           />
@@ -64,7 +64,7 @@ export function Navbar() {
       {/* Mobile menu */}
       <AnimatePresence>
         {open && (
-          <motion.ul
+          <m.ul
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -82,7 +82,7 @@ export function Navbar() {
                 </a>
               </li>
             ))}
-          </motion.ul>
+          </m.ul>
         )}
       </AnimatePresence>
     </nav>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import { SITE } from "@/lib/constants";
 import { socials } from "@/data/socials";
 import { SocialIcon } from "./SocialIcon";
@@ -37,7 +37,7 @@ export function Hero() {
       {/* ── Content ── */}
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         {/* Avatar */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ ...spring, delay: 0.05 }}
@@ -51,18 +51,18 @@ export function Hero() {
             priority
             className="h-full w-full object-cover"
           />
-        </motion.div>
+        </m.div>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...spring, delay: 0.15 }}
           className="mb-4 font-mono text-sm tracking-wider text-accent/80"
         >
           gm, I&apos;m
-        </motion.p>
+        </m.p>
 
-        <motion.h1
+        <m.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...spring, delay: 0.2 }}
@@ -71,9 +71,9 @@ export function Hero() {
           <span className="bg-gradient-to-r from-accent via-purple to-accent bg-[length:200%_auto] bg-clip-text text-transparent">
             {SITE.name}
           </span>
-        </motion.h1>
+        </m.h1>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...spring, delay: 0.35 }}
@@ -83,18 +83,18 @@ export function Hero() {
           <span className="ml-0.5 inline-block animate-blink text-accent">
             _
           </span>
-        </motion.p>
+        </m.p>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...spring, delay: 0.5 }}
           className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-text-muted"
         >
           {SITE.description}
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...spring, delay: 0.65 }}
@@ -128,11 +128,11 @@ export function Hero() {
               />
             </svg>
           </a>
-        </motion.div>
+        </m.div>
       </div>
 
       {/* ── Scroll Indicator ── */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
@@ -153,7 +153,7 @@ export function Hero() {
             />
           </svg>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   );
 }
