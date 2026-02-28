@@ -23,6 +23,7 @@ export function ProjectCard({
               alt={project.title}
               width={800}
               height={400}
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="h-48 w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-card to-transparent" />
