@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "CBas | Solana Developer",
+    siteName: "CBas",
+    url: "https://cryptocbas.dev",
     description:
       "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
     type: "website",
@@ -39,6 +41,7 @@ export const metadata: Metadata = {
     title: "CBas | Solana Developer",
     description:
       "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
+    images: ["/opengraph-image"],
   },
 };
 
