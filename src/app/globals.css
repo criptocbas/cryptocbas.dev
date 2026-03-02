@@ -38,6 +38,9 @@
   --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
   --animate-blink: blink 1s step-end infinite;
   --animate-scroll-hint: scroll-hint 2s ease-in-out infinite;
+  --animate-hero-enter: hero-enter 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-hero-scale: hero-scale 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-hero-fade: hero-fade 1s ease both;
 }
 
 /* ── Keyframes ── */
@@ -65,6 +68,21 @@
 @keyframes scroll-hint {
   0%, 100% { transform: translateY(0); opacity: 0.4; }
   50% { transform: translateY(8px); opacity: 1; }
+}
+
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-scale {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes hero-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* ── Base ── */

@@ -1,12 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { m } from "motion/react";
 import { SITE } from "@/lib/constants";
 import { socials } from "@/data/socials";
 import { SocialIcon } from "./SocialIcon";
-
-const spring = { type: "spring" as const, stiffness: 100, damping: 20 };
 
 export function Hero() {
   return (
@@ -37,12 +32,7 @@ export function Hero() {
       {/* ── Content ── */}
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         {/* Avatar */}
-        <m.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ ...spring, delay: 0.05 }}
-          className="mx-auto mb-6 h-28 w-28 overflow-hidden rounded-full border-2 border-accent/20 shadow-[0_0_30px_rgba(0,255,200,0.1)] sm:h-32 sm:w-32"
-        >
+        <div className="mx-auto mb-6 h-28 w-28 overflow-hidden rounded-full border-2 border-accent/20 shadow-[0_0_30px_rgba(0,255,200,0.1)] sm:h-32 sm:w-32 animate-hero-scale [animation-delay:50ms]">
           <Image
             src="/madlad.webp"
             alt="CBas"
@@ -51,55 +41,30 @@ export function Hero() {
             priority
             className="h-full w-full object-cover"
           />
-        </m.div>
+        </div>
 
-        <m.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...spring, delay: 0.15 }}
-          className="mb-4 font-mono text-sm tracking-wider text-accent/80"
-        >
+        <p className="mb-4 font-mono text-sm tracking-wider text-accent/80 animate-hero-enter [animation-delay:150ms]">
           gm, I&apos;m
-        </m.p>
+        </p>
 
-        <m.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...spring, delay: 0.2 }}
-          className="mb-6 text-6xl font-black tracking-tight sm:text-7xl md:text-8xl lg:text-9xl"
-        >
+        <h1 className="mb-6 text-6xl font-black tracking-tight sm:text-7xl md:text-8xl lg:text-9xl animate-hero-enter [animation-delay:200ms]">
           <span className="bg-gradient-to-r from-accent via-purple to-accent bg-[length:200%_auto] bg-clip-text text-transparent">
             {SITE.name}
           </span>
-        </m.h1>
+        </h1>
 
-        <m.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...spring, delay: 0.35 }}
-          className="mb-5 font-mono text-lg tracking-wide text-text-muted md:text-xl"
-        >
+        <p className="mb-5 font-mono text-lg tracking-wide text-text-muted md:text-xl animate-hero-enter [animation-delay:350ms]">
           {SITE.tagline}
           <span className="ml-0.5 inline-block animate-blink text-accent">
             _
           </span>
-        </m.p>
+        </p>
 
-        <m.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...spring, delay: 0.5 }}
-          className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-text-muted"
-        >
+        <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-text-muted animate-hero-enter [animation-delay:500ms]">
           {SITE.description}
-        </m.p>
+        </p>
 
-        <m.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...spring, delay: 0.65 }}
-          className="flex items-center justify-center gap-5"
-        >
+        <div className="flex items-center justify-center gap-5 animate-hero-enter [animation-delay:650ms]">
           {socials.map((s) => (
             <SocialIcon
               key={s.label}
@@ -128,16 +93,11 @@ export function Hero() {
               />
             </svg>
           </a>
-        </m.div>
+        </div>
       </div>
 
       {/* ── Scroll Indicator ── */}
-      <m.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-hero-fade [animation-delay:1.5s]">
         <div className="animate-scroll-hint">
           <svg
             className="h-5 w-5 text-text-muted/40"
@@ -153,7 +113,7 @@ export function Hero() {
             />
           </svg>
         </div>
-      </m.div>
+      </div>
     </section>
   );
 }
