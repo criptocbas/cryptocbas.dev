@@ -8,12 +8,14 @@ import { AnimateOnScroll } from "./AnimateOnScroll";
 export function ProjectCard({
   project,
   index,
+  direction,
 }: {
   project: Project;
   index: number;
+  direction?: "up" | "left" | "right" | "scale";
 }) {
   return (
-    <AnimateOnScroll delay={index * 0.15}>
+    <AnimateOnScroll delay={index * 0.15} direction={direction}>
       <GlowCard className="flex h-full flex-col">
         {/* Image / Gradient Placeholder */}
         {project.image ? (
@@ -24,13 +26,15 @@ export function ProjectCard({
               width={800}
               height={400}
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="h-48 w-full object-cover"
+              className="aspect-video w-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg-card to-transparent" />
+            {/* Shimmer overlay */}
+            <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/[0.06] to-transparent transition-transform duration-700 group-hover:translate-x-full" />
           </div>
         ) : (
           <div className="relative -mx-6 -mt-6 mb-6 overflow-hidden rounded-t-2xl">
-            <div className="flex h-32 items-center justify-center bg-gradient-to-br from-accent/[0.04] via-bg-card to-purple/[0.04]">
+            <div className="flex aspect-video items-center justify-center bg-gradient-to-br from-accent/[0.04] via-bg-card to-purple/[0.04]">
               <span className="font-mono text-5xl font-black tracking-tighter text-accent/[0.08]">
                 {String(index + 1).padStart(2, "0")}
               </span>
