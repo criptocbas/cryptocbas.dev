@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { m, AnimatePresence } from "motion/react";
 import { SITE } from "@/lib/constants";
 
@@ -13,10 +13,35 @@ const links = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-border/30 bg-bg-nav backdrop-blur-2xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <nav
+      className="fixed top-0 z-50 w-full border-b transition-all duration-300"
+      style={{
+        backgroundColor: scrolled
+          ? "rgba(10, 10, 15, 0.95)"
+          : "rgba(10, 10, 15, 0.85)",
+        borderColor: scrolled
+          ? "rgba(0, 255, 200, 0.1)"
+          : "rgba(30, 30, 48, 0.3)",
+        backdropFilter: scrolled ? "blur(20px)" : "blur(16px)",
+        boxShadow: scrolled
+          ? "0 4px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 200, 0.03)"
+          : "none",
+      }}
+    >
+      <div
+        className="mx-auto flex max-w-6xl items-center justify-between px-6 transition-all duration-300"
+        style={{ padding: scrolled ? "0.75rem 1.5rem" : "1rem 1.5rem" }}
+      >
         <a
           href="#"
           className="font-mono text-lg font-bold tracking-tight text-accent"
