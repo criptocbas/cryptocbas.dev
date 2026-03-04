@@ -47,7 +47,7 @@ const services = [
 export function ServicesSection() {
   return (
     <SectionWrapper id="services">
-      <AnimateOnScroll>
+      <AnimateOnScroll direction="scale">
         <p className="mb-2 font-mono text-xs tracking-widest text-accent/60 uppercase">
           Services
         </p>
@@ -62,7 +62,7 @@ export function ServicesSection() {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {services.map((service, i) => (
-          <AnimateOnScroll key={service.title} delay={i * 0.1}>
+          <AnimateOnScroll key={service.title} delay={i * 0.1} direction="left">
             <div className="group flex h-full flex-col rounded-xl border border-border bg-bg-card p-5 transition-all duration-500 hover:border-border-hover hover:bg-bg-card-hover">
               <div className="mb-4 text-accent/70 transition-colors duration-300 group-hover:text-accent">
                 {service.icon}

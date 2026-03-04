@@ -6,7 +6,7 @@ import { AnimateOnScroll } from "./AnimateOnScroll";
 export function ProjectsSection() {
   return (
     <SectionWrapper id="projects">
-      <AnimateOnScroll>
+      <AnimateOnScroll direction="scale">
         <p className="mb-2 font-mono text-xs tracking-widest text-accent/60 uppercase">
           Portfolio
         </p>
@@ -20,7 +20,12 @@ export function ProjectsSection() {
 
       <div className="grid gap-8 md:grid-cols-2">
         {projects.map((project, i) => (
-          <ProjectCard key={project.slug} project={project} index={i} />
+          <ProjectCard
+            key={project.slug}
+            project={project}
+            index={i}
+            direction={i % 2 === 0 ? "left" : "right"}
+          />
         ))}
       </div>
     </SectionWrapper>
