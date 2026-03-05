@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { MotionProvider } from "@/components/MotionProvider";
+import { BootWrapper } from "@/components/BootWrapper";
 import "./globals.css";
 
 const inter = Inter({
@@ -56,8 +57,10 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrains.variable} dot-grid antialiased`}
       >
         <MotionProvider>
-          <Navbar />
-          {children}
+          <BootWrapper>
+            <Navbar />
+            {children}
+          </BootWrapper>
         </MotionProvider>
       </body>
     </html>
