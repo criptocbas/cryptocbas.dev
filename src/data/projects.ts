@@ -42,7 +42,7 @@ export const projects: Project[] = [
       { label: "Live Demo", url: "https://outcry.vercel.app/", icon: "external" },
       { label: "Demo Video", url: "https://youtu.be/IUS9oxn_54c", icon: "youtube" },
     ],
-    status: "In Progress",
+    status: "Shipped",
     hackathon: "Graveyard Hackathon",
   },
   {
