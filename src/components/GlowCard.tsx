@@ -59,7 +59,7 @@ export function GlowCard({
           : { rotateX, rotateY, transformPerspective: 800 }
       }
       transition={{ type: "spring", stiffness: 300, damping: 25 }}
-      className={`group relative overflow-hidden rounded-2xl border border-border bg-bg-card p-6 transition-all duration-500 hover:border-border-hover hover:bg-bg-card-hover hover:shadow-[0_0_50px_rgba(212,160,64,0.06),0_0_100px_rgba(212,160,64,0.03)] active:scale-[0.98] ${className}`}
+      className={`group relative overflow-hidden rounded-2xl border border-border bg-bg-card p-6 transition-all duration-500 hover:border-border-hover hover:bg-bg-card-hover hover:shadow-[0_0_50px_rgba(20,241,149,0.06),0_0_100px_rgba(20,241,149,0.03)] active:scale-[0.98] ${className}`}
     >
       {/* Top accent line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/0 to-transparent transition-all duration-700 group-hover:via-accent/40" />

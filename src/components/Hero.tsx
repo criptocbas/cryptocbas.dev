@@ -22,7 +22,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.7, filter: "blur(8px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.1, ease }}
-          className="mx-auto mb-6 h-28 w-28 overflow-hidden rounded-full border-2 border-accent/20 shadow-[0_0_30px_rgba(212,160,64,0.1)] sm:h-32 sm:w-32"
+          className="mx-auto mb-6 h-28 w-28 overflow-hidden rounded-full border-2 border-accent/20 shadow-[0_0_30px_rgba(20,241,149,0.1)] sm:h-32 sm:w-32"
         >
           <Image
             src="/madlad.webp"
@@ -93,7 +93,7 @@ export function Hero() {
           ))}
           <a
             href="#projects"
-            className="group ml-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/[0.06] px-6 py-3 font-mono text-sm text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.12] hover:shadow-[0_0_20px_rgba(212,160,64,0.1)]"
+            className="group ml-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/[0.06] px-6 py-3 font-mono text-sm text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.12] hover:shadow-[0_0_20px_rgba(20,241,149,0.1)]"
           >
             View Projects
             <svg

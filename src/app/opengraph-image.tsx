@@ -48,7 +48,7 @@ export default async function Image() {
             width: "400px",
             height: "400px",
             borderRadius: "50%",
-            background: "rgba(212, 160, 64, 0.06)",
+            background: "rgba(20, 241, 149, 0.06)",
             filter: "blur(80px)",
           }}
         />
@@ -68,8 +68,8 @@ export default async function Image() {
               height: "240px",
               borderRadius: "50%",
               overflow: "hidden",
-              border: "3px solid rgba(212, 160, 64, 0.3)",
-              boxShadow: "0 0 40px rgba(212, 160, 64, 0.15)",
+              border: "3px solid rgba(20, 241, 149, 0.3)",
+              boxShadow: "0 0 40px rgba(20, 241, 149, 0.15)",
               flexShrink: 0,
               display: "flex",
             }}
@@ -94,7 +94,7 @@ export default async function Image() {
               style={{
                 fontSize: "72px",
                 fontWeight: 900,
-                background: "linear-gradient(to right, #d4a040, #9945ff)",
+                background: "linear-gradient(to right, #14F195, #9945ff)",
                 backgroundClip: "text",
                 color: "transparent",
                 lineHeight: 1.1,
