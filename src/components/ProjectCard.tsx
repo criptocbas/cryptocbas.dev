@@ -80,7 +80,8 @@ export function ProjectCard({
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface/30 px-4 py-2 font-mono text-sm text-text-muted transition-all duration-300 hover:border-accent/20 hover:text-accent hover:shadow-[0_0_12px_rgba(0,255,200,0.06)]"
+              aria-label={`${link.label} (opens in new tab)`}
+              className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface/50 px-4 py-2.5 font-mono text-sm text-text-muted transition-all duration-300 hover:border-accent/20 hover:text-accent hover:shadow-[0_0_12px_rgba(0,255,200,0.06)]"
             >
               {link.icon === "github" && (
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">

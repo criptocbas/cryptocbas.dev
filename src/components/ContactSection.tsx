@@ -9,7 +9,7 @@ export function ContactSection() {
     <SectionWrapper id="contact" className="pb-12">
       <AnimateOnScroll>
         <div className="text-center">
-          <p className="mb-6 font-mono text-xs tracking-widest text-accent/60 uppercase">
+          <p className="mb-6 font-mono text-xs tracking-widest text-accent/80 uppercase">
             Contact
           </p>
 
@@ -53,6 +53,7 @@ export function ContactSection() {
                 href={s.url}
                 target={s.icon === "email" ? undefined : "_blank"}
                 rel={s.icon === "email" ? undefined : "noopener noreferrer"}
+                aria-label={s.icon === "email" ? s.label : `${s.label} (opens in new tab)`}
                 className="inline-flex items-center gap-2 rounded-xl border border-border bg-bg-card px-5 py-3 font-mono text-sm text-text-muted transition-all duration-300 hover:border-accent/20 hover:text-accent hover:shadow-[0_0_20px_rgba(0,255,200,0.06)]"
               >
                 <SocialIcon icon={s.icon} url="#" label={s.label} />

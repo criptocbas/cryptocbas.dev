@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { m, AnimatePresence } from "motion/react";
 import { SITE } from "@/lib/constants";
 
@@ -14,6 +14,7 @@ const links = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -21,6 +22,39 @@ export function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Close mobile menu on ESC and return focus to toggle
+  useEffect(() => {
+    if (!open) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        toggleRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
+
+  // Close mobile menu on click outside
+  const handleClickOutside = useCallback(
+    (e: MouseEvent) => {
+      if (!open) return;
+      const target = e.target as HTMLElement;
+      if (!target.closest("nav")) {
+        setOpen(false);
+      }
+    },
+    [open]
+  );
+
+  useEffect(() => {
+    if (!open) return;
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [open, handleClickOutside]);
 
   return (
     <nav
@@ -39,8 +73,8 @@ export function Navbar() {
       }}
     >
       <div
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 transition-all duration-300"
-        style={{ padding: scrolled ? "0.75rem 1.5rem" : "1rem 1.5rem" }}
+        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 transition-all duration-300"
+        style={{ gap: scrolled ? "0" : "0.25rem" }}
       >
         <a
           href="#"
@@ -56,7 +90,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="font-mono text-sm text-text-muted transition-colors duration-300 hover:text-accent"
+                className="inline-block py-2 font-mono text-sm text-text-muted transition-colors duration-300 hover:text-accent"
               >
                 {l.label}
               </a>
@@ -64,10 +98,11 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
+        {/* Mobile toggle — 48×48 touch target */}
         <button
+          ref={toggleRef}
           onClick={() => setOpen(!open)}
-          className="flex flex-col gap-1.5 md:hidden"
+          className="flex h-12 w-12 flex-col items-center justify-center gap-1.5 md:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
         >
@@ -90,11 +125,12 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <m.ul
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ opacity: 0, scaleY: 0 }}
+            animate={{ opacity: 1, scaleY: 1 }}
+            exit={{ opacity: 0, scaleY: 0 }}
             transition={{ duration: 0.2 }}
-            className="overflow-hidden border-t border-border/20 bg-bg-nav backdrop-blur-2xl md:hidden"
+            className="origin-top overflow-hidden border-t border-border/20 bg-bg-nav backdrop-blur-2xl md:hidden"
+            aria-label="Mobile navigation"
           >
             {links.map((l) => (
               <li key={l.href}>

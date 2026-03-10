@@ -71,8 +71,8 @@ export function SocialIcon({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={label}
-      className={`text-text-muted transition-colors duration-300 hover:text-accent ${className}`}
+      aria-label={`${label} (opens in new tab)`}
+      className={`inline-flex h-11 w-11 items-center justify-center rounded-lg text-text-muted transition-colors duration-300 hover:text-accent ${className}`}
     >
       {inner}
     </a>

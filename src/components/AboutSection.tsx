@@ -6,7 +6,7 @@ export function AboutSection() {
   return (
     <SectionWrapper id="about">
       <AnimateOnScroll direction="scale">
-        <p className="mb-2 font-mono text-xs tracking-widest text-accent/60 uppercase">
+        <p className="mb-2 font-mono text-xs tracking-widest text-accent/80 uppercase">
           About
         </p>
         <h2 className="mb-2 text-3xl font-bold tracking-tight md:text-4xl">
@@ -25,7 +25,7 @@ export function AboutSection() {
             <div className="group rounded-xl border border-border bg-bg-card p-5 transition-all duration-500 hover:border-border-hover hover:bg-bg-card-hover">
               {/* Terminal-style header */}
               <div className="mb-4 flex items-center gap-2">
-                <span className="font-mono text-xs text-accent/50">
+                <span className="font-mono text-xs text-accent/70">
                   &gt;_
                 </span>
                 <h3 className="font-mono text-sm font-semibold text-accent">
@@ -39,7 +39,7 @@ export function AboutSection() {
                     key={skill}
                     className="flex items-center gap-2 text-sm text-text-muted"
                   >
-                    <span className="h-1 w-1 flex-shrink-0 rounded-full bg-accent/30" />
+                    <span className="h-1 w-1 flex-shrink-0 rounded-full bg-accent/50" />
                     {skill}
                   </li>
                 ))}

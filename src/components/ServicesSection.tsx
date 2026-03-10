@@ -48,7 +48,7 @@ export function ServicesSection() {
   return (
     <SectionWrapper id="services">
       <AnimateOnScroll direction="scale">
-        <p className="mb-2 font-mono text-xs tracking-widest text-accent/60 uppercase">
+        <p className="mb-2 font-mono text-xs tracking-widest text-accent/80 uppercase">
           Services
         </p>
         <h2 className="mb-2 text-3xl font-bold tracking-tight md:text-4xl">

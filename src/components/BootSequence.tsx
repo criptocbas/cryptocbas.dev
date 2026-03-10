@@ -154,7 +154,7 @@ export default function BootSequence({
             {lines.map((line, i) => (
               <div
                 key={i}
-                className={line.accent ? "text-[#89AACC]" : "text-text"}
+                className={line.accent ? "text-accent/70" : "text-text"}
               >
                 {line.text}
                 {i === lines.length - 1 && (

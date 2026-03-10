@@ -29,6 +29,7 @@ export function Hero() {
             alt="CBas"
             width={128}
             height={128}
+            sizes="(max-width: 640px) 112px, 128px"
             priority
             className="h-full w-full object-cover"
           />
@@ -92,7 +93,7 @@ export function Hero() {
           ))}
           <a
             href="#projects"
-            className="group ml-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/[0.06] px-6 py-2.5 font-mono text-sm text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.12] hover:shadow-[0_0_20px_rgba(0,255,200,0.1)]"
+            className="group ml-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/[0.06] px-6 py-3 font-mono text-sm text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.12] hover:shadow-[0_0_20px_rgba(0,255,200,0.1)]"
           >
             View Projects
             <svg
