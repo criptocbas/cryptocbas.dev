@@ -14,7 +14,7 @@ Personal portfolio site for CBas, a Solana developer.
 ## Design Tokens (globals.css)
 
 - Background: `bg` (#0a0a0f), `bg-card` (#12121a)
-- Accent: `accent` (#00ffc8) — neon cyan
+- Accent: `accent` (#d4a040) — warm amber
 - Secondary: `purple` (#9945ff) — Solana purple
 - Text: `text` (#e0e0e0), `text-muted` (#8888a0)
 - Border: `border` (#2a2a3e)
@@ -57,7 +57,7 @@ Potential clients — founders and teams looking to hire a Solana freelance deve
 
 ### Aesthetic Direction
 - **Dark-mode native** cyberpunk/terminal aesthetic — already nailed, don't change direction
-- **Neon cyan (#00ffc8) + Solana purple (#9945ff)** on deep navy-black — the signature palette
+- **Warm amber (#d4a040) + Solana purple (#9945ff)** on deep navy-black — the signature palette
 - **Monospace accents** (JetBrains Mono) for labels, taglines, and technical elements reinforce "developer" identity
 - **Glassmorphism** with blurred navbars, glowing card borders, particle effects
 - **Motion-rich but purposeful** — staggered reveals, 3D hover, scroll animations. Never gratuitous

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://cryptocbas.dev" },
   title: "CBas | Solana Developer",
   description:
-    "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
+    "Solana developer available for freelance work. I ship on-chain applications — from hackathon prototype to production.",
   icons: {
     icon: "/madlad-icon.png",
     apple: "/madlad-icon.png",
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     siteName: "CBas",
     url: "https://cryptocbas.dev",
     description:
-      "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
+      "Solana developer available for freelance work. I ship on-chain applications — from hackathon prototype to production.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "CBas | Solana Developer",
     description:
-      "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
+      "Solana developer available for freelance work. I ship on-chain applications — from hackathon prototype to production.",
     images: ["/opengraph-image"],
   },
 };

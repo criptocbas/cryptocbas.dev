@@ -20,7 +20,7 @@ export function ParticleNetwork() {
     const isMobile = w < 768;
     const count = isMobile ? 30 : 60;
     const colors = [
-      "rgba(0, 255, 200, 0.3)",
+      "rgba(212, 160, 64, 0.3)",
       "rgba(153, 69, 255, 0.3)",
     ];
     const particles: Particle[] = [];
@@ -123,7 +123,7 @@ export function ParticleNetwork() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(0, 255, 200, ${opacity})`;
+            ctx.strokeStyle = `rgba(212, 160, 64, ${opacity})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

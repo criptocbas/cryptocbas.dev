@@ -64,11 +64,11 @@ export function Navbar() {
           ? "rgba(10, 10, 15, 0.95)"
           : "rgba(10, 10, 15, 0.85)",
         borderColor: scrolled
-          ? "rgba(0, 255, 200, 0.1)"
+          ? "rgba(212, 160, 64, 0.1)"
           : "rgba(30, 30, 48, 0.3)",
         backdropFilter: scrolled ? "blur(20px)" : "blur(16px)",
         boxShadow: scrolled
-          ? "0 4px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 200, 0.03)"
+          ? "0 4px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(212, 160, 64, 0.03)"
           : "none",
       }}
     >

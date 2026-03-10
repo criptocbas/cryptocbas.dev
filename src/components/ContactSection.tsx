@@ -20,15 +20,14 @@ export function ContactSection() {
           </h2>
 
           <p className="mx-auto mb-10 max-w-md text-base leading-relaxed text-text-muted">
-            I&apos;m available for freelance work on Solana. Whether you need a
-            smart contract, a full-stack dApp, or a hackathon teammate — let&apos;s
-            talk.
+            Whether you need a smart contract, a full-stack dApp, or a
+            hackathon teammate — let&apos;s talk.
           </p>
 
           {/* Primary CTA — Email */}
           <a
             href={`mailto:${SITE.email}`}
-            className="group mb-8 inline-flex items-center gap-2.5 rounded-full border border-accent/20 bg-accent/[0.06] px-8 py-3 font-mono text-sm text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.12] hover:shadow-[0_0_30px_rgba(0,255,200,0.1)]"
+            className="group mb-8 inline-flex items-center gap-2.5 rounded-full border border-accent/20 bg-accent/[0.06] px-8 py-3 font-mono text-sm text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.12] hover:shadow-[0_0_30px_rgba(212,160,64,0.1)]"
           >
             <svg
               viewBox="0 0 24 24"
@@ -54,7 +53,7 @@ export function ContactSection() {
                 target={s.icon === "email" ? undefined : "_blank"}
                 rel={s.icon === "email" ? undefined : "noopener noreferrer"}
                 aria-label={s.icon === "email" ? s.label : `${s.label} (opens in new tab)`}
-                className="inline-flex items-center gap-2 rounded-xl border border-border bg-bg-card px-5 py-3 font-mono text-sm text-text-muted transition-all duration-300 hover:border-accent/20 hover:text-accent hover:shadow-[0_0_20px_rgba(0,255,200,0.06)]"
+                className="inline-flex items-center gap-2 rounded-xl border border-border bg-bg-card px-5 py-3 font-mono text-sm text-text-muted transition-all duration-300 hover:border-accent/20 hover:text-accent hover:shadow-[0_0_20px_rgba(212,160,64,0.06)]"
               >
                 <SocialIcon icon={s.icon} url="#" label={s.label} />
                 {s.label}

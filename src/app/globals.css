@@ -9,16 +9,16 @@
   --color-bg-nav-scrolled: rgba(10, 10, 15, 0.95);
   --color-surface: #161622;
   --color-border: #1e1e30;
-  --color-border-hover: rgba(0, 255, 200, 0.2);
+  --color-border-hover: rgba(212, 160, 64, 0.2);
 
   /* ── Text ── */
   --color-text: #ededf2;
   --color-text-muted: #9898ad;
 
-  /* ── Accent — neon cyan ── */
-  --color-accent: #00ffc8;
-  --color-accent-dim: rgba(0, 255, 200, 0.08);
-  --color-accent-glow: rgba(0, 255, 200, 0.15);
+  /* ── Accent — warm amber ── */
+  --color-accent: #d4a040;
+  --color-accent-dim: rgba(212, 160, 64, 0.08);
+  --color-accent-glow: rgba(212, 160, 64, 0.15);
 
   /* ── Secondary — Solana purple ── */
   --color-purple: #9945ff;
@@ -68,7 +68,7 @@ body {
 /* ── Selection ── */
 
 ::selection {
-  background: rgba(0, 255, 200, 0.25);
+  background: rgba(212, 160, 64, 0.25);
   color: #fff;
 }
 

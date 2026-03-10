@@ -14,7 +14,7 @@ export function ProjectsSection() {
           Projects
         </h2>
         <p className="mb-14 max-w-lg text-base text-text-muted">
-          On-chain applications I&apos;ve shipped and am building on Solana.
+          On-chain applications I&apos;ve shipped — from hackathons to production.
         </p>
       </AnimateOnScroll>
 

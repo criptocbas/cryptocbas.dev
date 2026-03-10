@@ -55,8 +55,8 @@ export function ServicesSection() {
           What I Can Build For You
         </h2>
         <p className="mb-14 max-w-lg text-base text-text-muted">
-          Available for freelance projects on Solana. From smart contracts to
-          full-stack applications — I ship fast and build to last.
+          From smart contracts to full-stack applications — I ship fast and
+          build to last.
         </p>
       </AnimateOnScroll>
 

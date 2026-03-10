@@ -2,7 +2,7 @@ export const SITE = {
   name: "CBas",
   tagline: "Building on Solana",
   description:
-    "I build on-chain applications on Solana — from hackathon prototype to production. Available for freelance projects.",
+    "From hackathon prototype to production — I ship on-chain applications and I'm available for freelance work.",
   email: "cbas.solana@gmail.com",
   url: "https://cryptocbas.dev",
 } as const;

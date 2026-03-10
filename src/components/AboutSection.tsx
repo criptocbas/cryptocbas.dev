@@ -13,9 +13,8 @@ export function AboutSection() {
           What I Work With
         </h2>
         <p className="mb-14 max-w-xl text-base leading-relaxed text-text-muted">
-          I&apos;ve shipped hackathon-winning Solana applications and I&apos;m
-          ready to build yours. Deep experience across the full stack — from
-          Rust programs to polished frontends.
+          Deep experience across the full stack — from Rust programs to
+          polished frontends.
         </p>
       </AnimateOnScroll>
 
