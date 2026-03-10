@@ -21,7 +21,7 @@ export function AboutSection() {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {skillCategories.map((cat, i) => (
           <AnimateOnScroll key={cat.label} delay={i * 0.1} direction="right">
-            <div className="group rounded-xl border border-border bg-bg-card p-5 transition-all duration-500 hover:border-border-hover hover:bg-bg-card-hover">
+            <div className="group rounded-xl border border-border bg-bg-card p-5 transition-all duration-500 hover:border-border-hover hover:bg-bg-card-hover active:scale-[0.98]">
               {/* Terminal-style header */}
               <div className="mb-4 flex items-center gap-2">
                 <span className="font-mono text-xs text-accent/70">

@@ -39,16 +39,12 @@ export function Navbar() {
   }, [open]);
 
   // Close mobile menu on click outside
-  const handleClickOutside = useCallback(
-    (e: MouseEvent) => {
-      if (!open) return;
-      const target = e.target as HTMLElement;
-      if (!target.closest("nav")) {
-        setOpen(false);
-      }
-    },
-    [open]
-  );
+  const handleClickOutside = useCallback((e: MouseEvent) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest("nav")) {
+      setOpen(false);
+    }
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -73,8 +69,7 @@ export function Navbar() {
       }}
     >
       <div
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 transition-all duration-300"
-        style={{ gap: scrolled ? "0" : "0.25rem" }}
+        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3"
       >
         <a
           href="#"

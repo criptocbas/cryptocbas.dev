@@ -65,9 +65,9 @@ export function ContactSection() {
 
       {/* Footer */}
       <div className="mt-24 border-t border-border/40 pt-8 text-center">
-        <p className="font-mono text-xs text-text-muted/60">
+        <p className="font-mono text-xs text-text-muted">
           Built on Solana
-          <span className="mx-2 text-accent/20">|</span>
+          <span className="mx-2 text-border">|</span>
           Next.js + Tailwind
         </p>
       </div>
