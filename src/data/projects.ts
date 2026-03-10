@@ -45,4 +45,18 @@ export const projects: Project[] = [
     status: "In Progress",
     hackathon: "Graveyard Hackathon",
   },
+  {
+    slug: "candor",
+    title: "Candor",
+    image: "/candor.webp",
+    tagline: "Truth in every pixel.",
+    description:
+      "Mobile-first app that cryptographically seals photos on Solana at the moment of capture. SHA-256 hashing, on-chain verification, and direct SOL vouching between creators — no middleman.",
+    tech: ["Solana", "Anchor", "React Native", "Expo", "Mobile Wallet Adapter", "Supabase"],
+    links: [
+      { label: "GitHub", url: "https://github.com/criptocbas/candor", icon: "github" },
+    ],
+    status: "Shipped",
+    hackathon: "Solana Monolith Hackathon",
+  },
 ];
