@@ -24,10 +24,13 @@ export function ContactSection() {
             hackathon teammate — let&apos;s talk.
           </p>
 
-          {/* Primary CTA — Email */}
+          {/* Primary CTA — Book a call */}
           <a
-            href={`mailto:${SITE.email}`}
-            className="group mb-8 inline-flex items-center gap-2.5 rounded-full border border-accent/20 bg-accent/[0.06] px-8 py-3 font-mono text-sm text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.12] hover:shadow-[0_0_30px_rgba(20,241,149,0.1)]"
+            href={SITE.calendar}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Book a 15-minute intro call (opens in new tab)"
+            className="group mb-4 inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/[0.1] px-8 py-3.5 font-mono text-sm font-medium text-accent transition-all duration-300 hover:border-accent/50 hover:bg-accent/[0.16] hover:shadow-[0_0_30px_rgba(20,241,149,0.15)]"
           >
             <svg
               viewBox="0 0 24 24"
@@ -38,21 +41,34 @@ export function ContactSection() {
               strokeLinejoin="round"
               className="h-4 w-4"
             >
-              <rect x="2" y="4" width="20" height="16" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              <rect x="3" y="4" width="18" height="18" rx="2" />
+              <path d="M16 2v4M8 2v4M3 10h18" />
             </svg>
-            {SITE.email}
+            Book a 15-min call
           </a>
+
+          {/* Secondary — Email */}
+          <p className="mb-8 font-mono text-xs text-text-muted">
+            or email{" "}
+            <a
+              href={`mailto:${SITE.email}`}
+              className="text-text-muted underline decoration-border underline-offset-4 transition-colors duration-300 hover:text-accent hover:decoration-accent/40"
+            >
+              {SITE.email}
+            </a>
+          </p>
 
           {/* Social links */}
           <div className="flex items-center justify-center gap-4">
-            {socials.map((s) => (
+            {socials
+              .filter((s) => s.icon !== "email")
+              .map((s) => (
               <a
                 key={s.label}
                 href={s.url}
-                target={s.icon === "email" ? undefined : "_blank"}
-                rel={s.icon === "email" ? undefined : "noopener noreferrer"}
-                aria-label={s.icon === "email" ? s.label : `${s.label} (opens in new tab)`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${s.label} (opens in new tab)`}
                 className="inline-flex items-center gap-2 rounded-xl border border-border bg-bg-card px-5 py-3 font-mono text-sm text-text-muted transition-all duration-300 hover:border-accent/20 hover:text-accent hover:shadow-[0_0_20px_rgba(20,241,149,0.06)]"
               >
                 <SocialIcon icon={s.icon} url="#" label={s.label} />

@@ -71,7 +71,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.85, ease }}
-          className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-text-muted"
+          className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-text-muted"
         >
           {SITE.description}
         </m.p>
@@ -79,7 +79,22 @@ export function Hero() {
         <m.div
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, delay: 1.05, ease }}
+          transition={{ duration: 0.8, delay: 0.95, ease }}
+          className="mb-10 flex justify-center"
+        >
+          <span className="inline-flex items-center gap-2.5 rounded-full border border-accent/20 bg-accent/[0.06] px-4 py-1.5 font-mono text-xs tracking-wide text-accent">
+            <span className="relative flex h-2 w-2" aria-hidden="true">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            </span>
+            Available for freelance work
+          </span>
+        </m.div>
+
+        <m.div
+          initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.8, delay: 1.1, ease }}
           className="flex items-center justify-center gap-5"
         >
           {socials.map((s) => (

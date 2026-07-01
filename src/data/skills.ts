@@ -6,7 +6,7 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     label: "Blockchain",
-    skills: ["Solana", "Anchor", "SPL Tokens", "ZK Proofs", "Program Security"],
+    skills: ["Solana", "Anchor", "SPL Tokens", "FHE", "Program Security"],
   },
   {
     label: "Frontend",
