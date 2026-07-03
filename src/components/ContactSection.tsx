@@ -20,8 +20,9 @@ export function ContactSection() {
           </h2>
 
           <p className="mx-auto mb-10 max-w-md text-base leading-relaxed text-text-muted">
-            Whether you need a smart contract, a full-stack dApp, or a
-            hackathon teammate — let&apos;s talk.
+            Building something that needs to stay private? Whether it&apos;s
+            confidential on-chain logic, a full-stack dApp, or an Arcium
+            integration — let&apos;s talk.
           </p>
 
           {/* Primary CTA — Book a call */}

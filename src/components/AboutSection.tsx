@@ -13,8 +13,8 @@ export function AboutSection() {
           What I Work With
         </h2>
         <p className="mb-14 max-w-xl text-base leading-relaxed text-text-muted">
-          Deep experience across the full stack — from Rust programs to
-          polished frontends.
+          Full-stack range with a focus on confidential compute — from Arcium
+          MPC circuits to polished frontends.
         </p>
       </AnimateOnScroll>
 

@@ -18,8 +18,8 @@ export const projects: Project[] = [
     image: "/HiddenHand.webp",
     tagline: "The only poker game where the house can't see your cards.",
     description:
-      "Fully on-chain Texas Hold'em with cryptographic privacy. Provably fair shuffling, FHE-encrypted cards, and verified reveals — no one can see your cards, not even the platform.",
-    tech: ["Solana", "Anchor", "Inco FHE", "MagicBlock VRF", "Next.js", "TypeScript"],
+      "Fully on-chain Texas Hold'em where the deck lives on-chain only as encrypted ciphertext. Shuffle, deal, and reveal run inside Arcium's MPC network, so the randomness never touches the chain — hands stay hidden by construction, not by trust. Not even the house can see your cards.",
+    tech: ["Solana", "Anchor", "Arcium", "MPC", "Next.js", "TypeScript"],
     links: [
       { label: "GitHub", url: "https://github.com/HiddenHandPoker/HiddenHand", icon: "github" },
       { label: "Live Demo", url: "https://hiddenhand.netlify.app", icon: "external" },

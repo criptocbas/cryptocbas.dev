@@ -1,8 +1,8 @@
 export const SITE = {
   name: "CBas",
-  tagline: "Building on Solana",
+  tagline: "Confidential compute on Solana",
   description:
-    "From hackathon prototype to production — I ship on-chain applications and I'm available for freelance work.",
+    "I build privacy-preserving Solana apps with Arcium — confidential compute where data stays encrypted even while it's computed on. Available for freelance work.",
   email: "cbas.solana@gmail.com",
   calendar: "https://cal.com/crypto_cbas",
   url: "https://cryptocbas.dev",
