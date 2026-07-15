@@ -52,10 +52,17 @@
 
 /* ── Base ── */
 
+html {
+  /* Fixed navbar offset for #projects, #services, etc. */
+  scroll-padding-top: 5.5rem;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-sans), system-ui, sans-serif;
+  /* Avoid horizontal bounce from particle canvas / 3D cards */
+  overflow-x: hidden;
 }
 
 /* ── Dot Grid Background ── */

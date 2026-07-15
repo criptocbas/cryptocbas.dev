@@ -60,7 +60,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40, scale: 0.95, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.45, ease }}
-          className="mb-6 text-6xl font-black tracking-tight sm:text-7xl md:text-8xl lg:text-9xl"
+          className="mb-5 text-5xl font-black tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
         >
           <span className="bg-gradient-to-r from-accent via-purple to-accent bg-[length:200%_auto] bg-clip-text text-transparent">
             {SITE.name}

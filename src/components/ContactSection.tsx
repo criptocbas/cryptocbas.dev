@@ -82,9 +82,16 @@ export function ContactSection() {
       {/* Footer */}
       <div className="mt-24 border-t border-border/40 pt-8 text-center">
         <p className="font-mono text-xs text-text-muted">
-          Built on Solana
-          <span className="mx-2 text-border">|</span>
-          Next.js + Tailwind
+          © {new Date().getFullYear()} {SITE.name}
+          <span className="mx-2 text-border">·</span>
+          Solana engineer
+          <span className="mx-2 text-border">·</span>
+          <a
+            href={SITE.url}
+            className="transition-colors hover:text-accent"
+          >
+            cryptocbas.dev
+          </a>
         </p>
       </div>
     </SectionWrapper>

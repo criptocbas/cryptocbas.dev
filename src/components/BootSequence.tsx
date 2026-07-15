@@ -3,8 +3,9 @@
 import { useEffect, useState, useRef } from "react";
 import { AnimatePresence, m } from "motion/react";
 
-const CHAR_DELAY = 25;
-const PROGRESS_BLOCKS = 12;
+/* Keep boot snappy — clients land here to hire, not watch a cinematic */
+const CHAR_DELAY = 14;
+const PROGRESS_BLOCKS = 10;
 const BLOCK = "\u2588";
 
 interface Line {

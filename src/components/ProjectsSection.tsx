@@ -4,6 +4,8 @@ import { ProjectCard } from "./ProjectCard";
 import { AnimateOnScroll } from "./AnimateOnScroll";
 
 export function ProjectsSection() {
+  const [featured, ...rest] = projects;
+
   return (
     <SectionWrapper id="projects">
       <AnimateOnScroll direction="scale">
@@ -11,20 +13,28 @@ export function ProjectsSection() {
           Portfolio
         </p>
         <h2 className="mb-2 text-3xl font-bold tracking-tight md:text-4xl">
-          Projects
+          Selected work
         </h2>
         <p className="mb-14 max-w-xl text-base text-text-muted">
-          Selected work: confidential compute, DeFi protocol implementations,
-          real-time auctions, and mobile Solana — demos and source included.
+          Confidential compute, DeFi protocol implementations, real-time
+          systems, and mobile Solana — demos and source included.
         </p>
       </AnimateOnScroll>
 
       <div className="grid gap-8 md:grid-cols-2">
-        {projects.map((project, i) => (
+        {featured && (
+          <ProjectCard
+            project={featured}
+            index={0}
+            direction="scale"
+            featured
+          />
+        )}
+        {rest.map((project, i) => (
           <ProjectCard
             key={project.slug}
             project={project}
-            index={i}
+            index={i + 1}
             direction={i % 2 === 0 ? "left" : "right"}
           />
         ))}
