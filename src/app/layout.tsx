@@ -25,6 +25,16 @@ export const metadata: Metadata = {
   title: "CBas | Confidential Compute & Full-Stack Solana",
   description:
     "Solana engineer specializing in Arcium MPC confidential compute, Anchor programs, and full-stack dApps. Open Track winner — available for freelance work.",
+  keywords: [
+    "Solana developer",
+    "Arcium",
+    "MPC",
+    "confidential compute",
+    "Anchor",
+    "freelance Solana",
+    "DeFi engineer",
+    "smart contract",
+  ],
   icons: {
     icon: "/madlad-icon.png",
     apple: "/madlad-icon.png",
@@ -43,6 +53,35 @@ export const metadata: Metadata = {
     description:
       "Solana engineer specializing in Arcium MPC confidential compute, Anchor programs, and full-stack dApps. Open Track winner — available for freelance work.",
     images: ["/opengraph-image"],
+    creator: "@Crypto_CBas",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "CBas",
+  url: "https://cryptocbas.dev",
+  email: "cbas.solana@gmail.com",
+  jobTitle: "Solana Engineer",
+  description:
+    "Confidential compute (Arcium MPC) and full-stack Solana development. Available for freelance work.",
+  sameAs: [
+    "https://github.com/criptocbas",
+    "https://x.com/Crypto_CBas",
+  ],
+  knowsAbout: [
+    "Solana",
+    "Anchor",
+    "Arcium",
+    "MPC",
+    "DeFi",
+    "Next.js",
+  ],
+  offers: {
+    "@type": "Offer",
+    description: "Freelance Solana development: confidential compute, programs, full-stack MVPs",
+    url: "https://cal.com/crypto_cbas",
   },
 };
 
@@ -56,6 +95,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrains.variable} dot-grid antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <MotionProvider>
           <BootWrapper>
             <a
@@ -72,3 +115,4 @@ export default function RootLayout({
     </html>
   );
 }
+
