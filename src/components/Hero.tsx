@@ -18,9 +18,14 @@ const proofPoints = [
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
-      {/* ── Particle Background ── */}
-      <ParticleNetwork />
+    // min-h + center without clipping: section grows with content.
+    // overflow-hidden here was slicing the avatar when the hero block
+    // got taller than the viewport (extra CTAs / proof strip).
+    <section className="relative flex min-h-[100svh] items-center justify-center overflow-x-hidden px-6 pt-28 pb-20">
+      {/* ── Particle Background (clip particles only, not hero content) ── */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <ParticleNetwork />
+      </div>
 
       {/* ── Content ── */}
       <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -29,7 +34,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.7, filter: "blur(8px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.1, ease }}
-          className="mx-auto mb-6 h-28 w-28 overflow-hidden rounded-full border-2 border-accent/20 shadow-[0_0_30px_rgba(20,241,149,0.1)] sm:h-32 sm:w-32"
+          className="mx-auto mb-6 h-28 w-28 shrink-0 overflow-hidden rounded-full border-2 border-accent/20 shadow-[0_0_30px_rgba(20,241,149,0.1)] sm:h-32 sm:w-32"
         >
           <Image
             src="/madlad.webp"
@@ -38,7 +43,7 @@ export function Hero() {
             height={128}
             sizes="(max-width: 640px) 112px, 128px"
             priority
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-top"
           />
         </m.div>
 
