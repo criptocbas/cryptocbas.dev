@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "CBas | Confidential Compute on Solana";
+export const alt = "CBas | Confidential Compute & Full-Stack Solana";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -109,7 +109,7 @@ export default async function Image() {
                 fontFamily: "monospace",
               }}
             >
-              Confidential compute on Solana_
+              Confidential compute & full-stack Solana_
             </div>
             <div
               style={{
@@ -120,7 +120,7 @@ export default async function Image() {
                 marginTop: "8px",
               }}
             >
-              Privacy-preserving apps with Arcium MPC
+              Arcium MPC · Anchor · DeFi · Available for hire
             </div>
           </div>
         </div>

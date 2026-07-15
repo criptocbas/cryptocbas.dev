@@ -20,9 +20,8 @@ export function ContactSection() {
           </h2>
 
           <p className="mx-auto mb-10 max-w-md text-base leading-relaxed text-text-muted">
-            Building something that needs to stay private? Whether it&apos;s
-            confidential on-chain logic, a full-stack dApp, or an Arcium
-            integration — let&apos;s talk.
+            Confidential compute, Anchor programs, DeFi features, or a full
+            Solana MVP — book a short call and we&apos;ll scope it cleanly.
           </p>
 
           {/* Primary CTA — Book a call */}

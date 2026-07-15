@@ -6,18 +6,24 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
   {
     label: "Blockchain",
-    skills: ["Solana", "Anchor", "Arcium", "MPC", "Program Security"],
+    skills: [
+      "Solana / Anchor",
+      "Arcium MPC",
+      "PDAs · CPIs · SPL",
+      "Token-2022",
+      "Program security",
+    ],
   },
   {
-    label: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Motion"],
+    label: "DeFi & Protocols",
+    skills: ["AMM / CLMM", "Lending", "Routers & vaults", "LiteSVM testing", "Oracle patterns"],
   },
   {
-    label: "Backend & Infra",
-    skills: ["Node.js", "Rust", "PostgreSQL", "WebSockets", "Vercel"],
+    label: "Full-stack",
+    skills: ["Next.js", "TypeScript", "Wallet adapters", "React Native", "Real-time UIs"],
   },
   {
-    label: "Tools",
-    skills: ["Git", "pnpm", "Turborepo", "Figma", "Linux"],
+    label: "Infra & Ship",
+    skills: ["Rust", "Ephemeral Rollups", "Vercel", "PostgreSQL", "AI-accelerated delivery"],
   },
 ];

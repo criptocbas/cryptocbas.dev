@@ -10,11 +10,17 @@ export function AboutSection() {
           About
         </p>
         <h2 className="mb-2 text-3xl font-bold tracking-tight md:text-4xl">
-          What I Work With
+          Builder, not a slide deck
         </h2>
-        <p className="mb-14 max-w-xl text-base leading-relaxed text-text-muted">
-          Full-stack range with a focus on confidential compute — from Arcium
-          MPC circuits to polished frontends.
+        <p className="mb-6 max-w-2xl text-base leading-relaxed text-text-muted">
+          I specialize in confidential compute on Solana (Arcium MPC) and
+          full-stack product shipping — Anchor programs, DeFi primitives, and
+          polished Next.js clients. I move fast with AI-assisted workflows, but
+          the deliverables are still tested, documented, and production-minded.
+        </p>
+        <p className="mb-14 max-w-2xl text-base leading-relaxed text-text-muted">
+          Best fit for founders who need an owner: privacy features, protocol
+          logic, or an MVP that has to demo cleanly under a deadline.
         </p>
       </AnimateOnScroll>
 

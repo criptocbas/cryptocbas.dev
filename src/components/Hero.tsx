@@ -9,6 +9,13 @@ import { ParticleNetwork } from "./ParticleNetwork";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
+const proofPoints = [
+  "Open Track Winner",
+  "Arcium MPC",
+  "Anchor + Next.js",
+  "DeFi from scratch",
+];
+
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
@@ -71,7 +78,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.85, ease }}
-          className="mx-auto mb-8 max-w-xl text-lg leading-relaxed text-text-muted"
+          className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-text-muted"
         >
           {SITE.description}
         </m.p>
@@ -80,7 +87,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 0.95, ease }}
-          className="mb-10 flex justify-center"
+          className="mb-6 flex justify-center"
         >
           <span className="inline-flex items-center gap-2.5 rounded-full border border-accent/20 bg-accent/[0.06] px-4 py-1.5 font-mono text-xs tracking-wide text-accent">
             <span className="relative flex h-2 w-2" aria-hidden="true">
@@ -91,26 +98,56 @@ export function Hero() {
           </span>
         </m.div>
 
+        <m.ul
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1.0, ease }}
+          className="mb-10 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 font-mono text-[11px] tracking-wide text-text-muted sm:text-xs"
+        >
+          {proofPoints.map((point, i) => (
+            <li key={point} className="inline-flex items-center gap-3">
+              {i > 0 && (
+                <span className="text-border" aria-hidden="true">
+                  ·
+                </span>
+              )}
+              <span>{point}</span>
+            </li>
+          ))}
+        </m.ul>
+
         <m.div
           initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 0.8, delay: 1.1, ease }}
-          className="flex items-center justify-center gap-5"
+          className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5"
         >
-          {socials.map((s) => (
-            <SocialIcon
-              key={s.label}
-              icon={s.icon}
-              url={s.url}
-              label={s.label}
-              className="text-xl"
-            />
-          ))}
+          <a
+            href={SITE.calendar}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/[0.12] px-7 py-3 font-mono text-sm font-medium text-accent transition-all duration-300 hover:border-accent/50 hover:bg-accent/[0.18] hover:shadow-[0_0_24px_rgba(20,241,149,0.15)]"
+          >
+            Book a call
+            <svg
+              className="h-3.5 w-3.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
           <a
             href="#projects"
-            className="group ml-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/[0.06] px-6 py-3 font-mono text-sm text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.12] hover:shadow-[0_0_20px_rgba(20,241,149,0.1)]"
+            className="group inline-flex items-center gap-2 rounded-full border border-border bg-bg-card/60 px-6 py-3 font-mono text-sm text-text-muted transition-all duration-300 hover:border-accent/30 hover:text-accent"
           >
-            View Projects
+            View projects
             <svg
               className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-y-0.5"
               fill="none"
@@ -125,6 +162,23 @@ export function Hero() {
               />
             </svg>
           </a>
+        </m.div>
+
+        <m.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.25, ease }}
+          className="mt-8 flex items-center justify-center gap-5"
+        >
+          {socials.map((s) => (
+            <SocialIcon
+              key={s.label}
+              icon={s.icon}
+              url={s.url}
+              label={s.label}
+              className="text-xl"
+            />
+          ))}
         </m.div>
       </div>
 

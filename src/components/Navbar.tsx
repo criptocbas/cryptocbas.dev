@@ -80,18 +80,28 @@ export function Navbar() {
         </a>
 
         {/* Desktop */}
-        <ul className="hidden gap-8 md:flex">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className="inline-block py-2 font-mono text-sm text-text-muted transition-colors duration-300 hover:text-accent"
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="hidden items-center gap-8 md:flex">
+          <ul className="flex gap-8">
+            {links.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  className="inline-block py-2 font-mono text-sm text-text-muted transition-colors duration-300 hover:text-accent"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={SITE.calendar}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-accent/25 bg-accent/[0.08] px-4 py-1.5 font-mono text-xs text-accent transition-all duration-300 hover:border-accent/40 hover:bg-accent/[0.14]"
+          >
+            Hire me
+          </a>
+        </div>
 
         {/* Mobile toggle — 48×48 touch target */}
         <button
@@ -138,6 +148,17 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href={SITE.calendar}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="block px-6 py-3 font-mono text-sm text-accent transition-colors duration-300"
+              >
+                Hire me
+              </a>
+            </li>
           </m.ul>
         )}
       </AnimatePresence>

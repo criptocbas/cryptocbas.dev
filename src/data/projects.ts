@@ -30,6 +30,18 @@ export const projects: Project[] = [
     hackathon: "Solana Privacy Hack",
   },
   {
+    slug: "solana-defi",
+    title: "solana-defi",
+    tagline: "Seven DeFi protocols from scratch — tested, not theorized.",
+    description:
+      "Reference implementations of core DeFi primitives on Solana: constant-product AMM, concentrated liquidity (CLMM), lending/borrowing, multi-hop router, leveraged yield vault, and more. Built with Anchor and exercised under LiteSVM so the math and CPI paths are actually proven.",
+    tech: ["Solana", "Anchor", "Rust", "LiteSVM", "AMM", "CLMM", "Lending"],
+    links: [
+      { label: "GitHub", url: "https://github.com/criptocbas/solana-defi", icon: "github" },
+    ],
+    status: "Shipped",
+  },
+  {
     slug: "outcry",
     title: "OUTCRY",
     image: "/outcry.webp",
@@ -44,6 +56,22 @@ export const projects: Project[] = [
     ],
     status: "Shipped",
     hackathon: "Graveyard Hackathon",
+  },
+  {
+    slug: "salary-benchmark",
+    title: "Salary Benchmark",
+    tagline: "Encrypted submissions. Public average. No one sees your number.",
+    description:
+      "Privacy-preserving salary benchmarking on Solana via Arcium MPC. Participants submit sealed compensation data; the network aggregates and reveals only the public average — individual salaries never leave ciphertext.",
+    tech: ["Solana", "Anchor", "Arcium", "MPC", "TypeScript"],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/criptocbas/salary-benchmark-arcium",
+        icon: "github",
+      },
+    ],
+    status: "Shipped",
   },
   {
     slug: "candor",

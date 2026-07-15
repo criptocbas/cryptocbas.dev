@@ -22,26 +22,26 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://cryptocbas.dev"),
   alternates: { canonical: "https://cryptocbas.dev" },
-  title: "CBas | Confidential Compute on Solana",
+  title: "CBas | Confidential Compute & Full-Stack Solana",
   description:
-    "Solana developer specializing in confidential compute with Arcium (MPC). I build privacy-preserving on-chain apps — available for freelance work.",
+    "Solana engineer specializing in Arcium MPC confidential compute, Anchor programs, and full-stack dApps. Open Track winner — available for freelance work.",
   icons: {
     icon: "/madlad-icon.png",
     apple: "/madlad-icon.png",
   },
   openGraph: {
-    title: "CBas | Confidential Compute on Solana",
+    title: "CBas | Confidential Compute & Full-Stack Solana",
     siteName: "CBas",
     url: "https://cryptocbas.dev",
     description:
-      "Solana developer specializing in confidential compute with Arcium (MPC). I build privacy-preserving on-chain apps — available for freelance work.",
+      "Solana engineer specializing in Arcium MPC confidential compute, Anchor programs, and full-stack dApps. Open Track winner — available for freelance work.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CBas | Confidential Compute on Solana",
+    title: "CBas | Confidential Compute & Full-Stack Solana",
     description:
-      "Solana developer specializing in confidential compute with Arcium (MPC). I build privacy-preserving on-chain apps — available for freelance work.",
+      "Solana engineer specializing in Arcium MPC confidential compute, Anchor programs, and full-stack dApps. Open Track winner — available for freelance work.",
     images: ["/opengraph-image"],
   },
 };
